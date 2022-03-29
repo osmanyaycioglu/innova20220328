@@ -1,0 +1,27 @@
+
+        fiziksel Memory     |
+                            |  Virtual Memory  ---> 512M -----> New ve Old
+        swap                |
+
+minor GC
+full GC
+
+        New                             |               Old                                  |
+                                            Araba , Araba , Araba
+
+        Stack                   |        New Heap
+-------------------------------------------------------------------------
+Stack1                          |
+    4 byte data -> 300          |
+    8 byte ref xyz -> null      |
+                                |    Araba1  0x327742
+    8b ref araba = 0x327742     |    Araba1 -> 1 ref
+    8b ref otherAraba = 0x327742|    Araba1 -> 2 ref
+    8b ref maraba = 0x327742    |    Araba1 -> 3 ref
+                                |    Araba2  0x327800
+        xyz=0x327800            |    Araba2 -> 1 ref
+                                |    Araba3  0x327978
+        araba = 0x327978        |    Araba3 -> 1 ref , Araba1 -> 2 ref 
+        maraba = null           |    Araba1 -> 1 ref
+        otherAraba = null       |    Araba1 -> 0 ref
+                
