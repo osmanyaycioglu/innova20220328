@@ -8,6 +8,7 @@ public class Araba {
     private String model = "unknown";
 
     public Araba() {
+        super();
     }
 
 
