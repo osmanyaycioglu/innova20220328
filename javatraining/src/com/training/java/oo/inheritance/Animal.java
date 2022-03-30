@@ -3,9 +3,9 @@ package com.training.java.oo.inheritance;
 
 public class Animal {
 
-    private int    weight;
-    private int    height;
-    private String word;
+    private int      weight;
+    int              height;
+    protected String word;
 
 
     public Animal(int weightParam,
@@ -24,6 +24,15 @@ public class Animal {
         height = heightParam;
         word = "wooow";
     }
+
+    protected void testProtected() {
+        System.out.println("protected run");
+    }
+    
+    void testPackagePrivate() {
+        System.out.println("PackagePrivate run");
+    }
+    
 
     public void walk() {
         System.out.println("I am walking");

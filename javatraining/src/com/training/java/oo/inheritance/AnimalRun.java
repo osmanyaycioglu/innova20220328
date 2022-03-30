@@ -5,8 +5,12 @@ public class AnimalRun {
 
     public static void main(String[] args) {
         Animal animalLoc = new Bird(1, 50);
+        animalLoc.word = "test";
+        animalLoc.height = 90;
+        animalLoc.testPackagePrivate();
         animalLoc.walk();
         animalLoc.talk();
+        animalLoc.testProtected();
         
         System.out.println("-----------------------");
         
