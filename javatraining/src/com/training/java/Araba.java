@@ -3,8 +3,8 @@ package com.training.java;
 
 public class Araba {
 
-    private int    currentSpeed;
-    private int    topSpeed;
+    private int    currentSpeed = 0;
+    private int    topSpeed = 100;
     private String model = "unknown";
 
     public Araba() {
