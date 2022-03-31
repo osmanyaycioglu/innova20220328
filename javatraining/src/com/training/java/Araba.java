@@ -4,13 +4,18 @@ package com.training.java;
 public class Araba {
 
     private int    currentSpeed = 0;
-    private int    topSpeed = 100;
-    private String model = "unknown";
+    private int    topSpeed     = 100;
+    private String model        = "unknown";
 
     public Araba() {
         super();
     }
 
+
+    @Override
+    public String toString() {
+        return "currentSpeed=(" + this.currentSpeed + "), topSpeed=(" + this.topSpeed + "), model=(" + this.model + ")";
+    }
 
     boolean foward(final int deltaSpeed,
                    final int duration) {

@@ -9,7 +9,8 @@ public class RunAraba {
         Araba araba = new Araba();
         araba.setTopSpeed(180);
         araba.setModel("BMW");
-        System.out.println("Araba yaratıldı");
+        System.out.println("Araba yaratıldı " + (araba == null ? "null" : araba.toString()));
+        System.out.println("Araba yaratıldı " + araba);
 
         Araba araba2 = new Araba();
         araba2.setTopSpeed(300);
