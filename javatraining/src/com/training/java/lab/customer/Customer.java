@@ -67,5 +67,24 @@ public class Customer {
         this.customerType = customerTypeParam;
     }
 
+    @Override
+    public String toString() {
+        return "Customer [accountNumber="
+               + this.accountNumber
+               + ", amount="
+               + this.amount
+               + ", name="
+               + this.name
+               + ", surname="
+               + this.surname
+               + ", username="
+               + this.username
+               + ", password="
+               + this.password
+               + ", customerType="
+               + this.customerType
+               + "]";
+    }
+
 
 }

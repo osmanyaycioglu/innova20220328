@@ -38,4 +38,21 @@ public class CustomerManager {
             e.printStackTrace();
         }
     }
+
+    public Customer getCustomerByAccountNumber(final Long accountNumber) {
+        return this.customerMap.get(accountNumber);
+    }
+
+    public Customer login(final String username,
+                          final String password) {
+        Customer customerLoc = this.usernameCustomerMap.get(username);
+        if (customerLoc == null) {
+            return null;
+        }
+        if (password.equals(customerLoc.getPassword())) {
+            return customerLoc;
+        }
+        return null;
+    }
 }
+
