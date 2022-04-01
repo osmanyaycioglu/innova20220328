@@ -4,8 +4,8 @@ package com.training.java.constructor;
 public class Person {
 
     // Field larım
-    private String name;
-    private String surname;
+    private String  name;
+    private String  surname;
     private Integer weight;
     private Integer height = 100;
 
@@ -13,61 +13,75 @@ public class Person {
     public Person() {
     }
 
-    public Person(String nameParam,
-                  String surnameParam) {
-        name = nameParam;
-        surname = surnameParam;
+    public Person(final String nameParam,
+                  final String surnameParam) {
+        this.name = nameParam;
+        this.surname = surnameParam;
     }
 
-    public Person(String nameParam,
-                  String surnameParam,
-                  Integer weightParam,
-                  Integer heightParam) {
-        name = nameParam;
-        surname = surnameParam;
-        weight = weightParam;
-        height = heightParam;
+    public Person(final String nameParam,
+                  final String surnameParam,
+                  final Integer weightParam,
+                  final Integer heightParam) {
+        this.name = nameParam;
+        this.surname = surnameParam;
+        this.weight = weightParam;
+        this.height = heightParam;
     }
 
-    public Person(String nameParam,
-                  String surnameParam,
-                  Integer heightParam) {
-        name = nameParam;
-        surname = surnameParam;
-        height = heightParam;
+    public Person(final String nameParam,
+                  final String surnameParam,
+                  final Integer heightParam) {
+        this.name = nameParam;
+        this.surname = surnameParam;
+        this.height = heightParam;
     }
 
 
     // Method larım
     public String getName() {
-        return name;
+        return this.name;
     }
 
-    public void setName(String nameParam) {
-        name = nameParam;
+    public void setName(final String nameParam) {
+        this.name = nameParam;
     }
 
     public String getSurname() {
-        return surname;
+        return this.surname;
     }
 
-    public void setSurname(String surnameParam) {
-        surname = surnameParam;
+    public void setSurname(final String surnameParam) {
+        this.surname = surnameParam;
     }
 
     public Integer getWeight() {
-        return weight;
+        return this.weight;
     }
-    
-    public void setWeight(Integer weightParam) {
-        weight = weightParam;
+
+    public void setWeight(final Integer weightParam) {
+        this.weight = weightParam;
     }
-    
+
     public Integer getHeight() {
-        return height;
+        return this.height;
     }
-    
-    public void setHeight(Integer heightParam) {
-        height = heightParam;
+
+    public void setHeight(final Integer heightParam) {
+        this.height = heightParam;
     }
+
+    @Override
+    public String toString() {
+        return "Person [name="
+               + this.name
+               + ", surname="
+               + this.surname
+               + ", weight="
+               + this.weight
+               + ", height="
+               + this.height
+               + "]";
+    }
+
 }
