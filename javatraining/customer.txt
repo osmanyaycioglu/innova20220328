@@ -1,0 +1,3 @@
+10000,1000,osman,yaycıoğlu,osmanyay,123456,GOLD
+20001,5000,ali,alas,alialas,123456,PLANTINUIM
+20103,15000,veli,kartu,velikar,123456,SILVER
