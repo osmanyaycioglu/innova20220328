@@ -19,6 +19,12 @@ public class HesapMakinesi {
                                                   new CarpmaHesaplama()));
         this.hesaplamalar.add(new HesaplamaObjesi("bolme",
                                                   new BolmeHesaplama()));
+        this.hesaplamalar.add(new HesaplamaObjesi("kare",
+                                                  new KareHesaplama()));
+        this.hesaplamalar.add(new HesaplamaObjesi("logaritma",
+                                                  new logaritmikHesaplama()));
+        this.hesaplamalar.add(new HesaplamaObjesi("üçlü toplama",
+                                                  new ÜçlüToplamaHesaplama()));
     }
 
     private void menuGoster() {
@@ -37,16 +43,16 @@ public class HesapMakinesi {
                 System.out.println("Seçiminiz : ");
                 int secim = scannerLoc.nextInt();
                 if (this.hesaplamalar.size() >= secim) {
-                    System.out.println("Hesaplama için ilk deger : ");
-                    double val1Loc = scannerLoc.nextDouble();
-                    System.out.println("Hesaplama için ikinci deger : ");
-                    double val2Loc = scannerLoc.nextDouble();
                     HesaplamaObjesi hesaplamaObjesiLoc = this.hesaplamalar.get(secim - 1);
                     IHesaplama hesaplamaLoc = hesaplamaObjesiLoc.getHesaplama();
-                    double hesaplaLoc = hesaplamaLoc.hesapla(val1Loc,
-                                                             val2Loc);
+                    int degiskenSayisiLoc = hesaplamaLoc.getDegiskenSayisi();
+                    double[] degiskenler = new double[degiskenSayisiLoc];
+                    for (int iLoc = 0; iLoc < degiskenler.length; iLoc++) {
+                        System.out.println(hesaplamaObjesiLoc.getIslemIsmi() + " için " + (iLoc + 1) + ". değişken : ");
+                        degiskenler[iLoc] = scannerLoc.nextDouble();
+                    }
+                    double hesaplaLoc = hesaplamaLoc.hesapla(degiskenler);
                     System.out.println(hesaplamaObjesiLoc.getIslemIsmi() + " işleminizin sonucu : " + hesaplaLoc);
-
                 } else {
                     break;
                 }

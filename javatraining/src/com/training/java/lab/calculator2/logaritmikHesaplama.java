@@ -1,16 +1,17 @@
 package com.training.java.lab.calculator2;
 
 
-public class CarpmaHesaplama implements IHesaplama {
+public class logaritmikHesaplama implements IHesaplama {
 
     @Override
     public double hesapla(final double... valuesParam) {
-        return valuesParam[0] * valuesParam[1];
+        return Math.log(valuesParam[0]);
     }
 
     @Override
     public int getDegiskenSayisi() {
-        return 2;
+        return 1;
     }
+
 
 }
