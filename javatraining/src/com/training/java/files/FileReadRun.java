@@ -28,6 +28,7 @@ public class FileReadRun {
                     personLoc.setWeight(Integer.parseInt(splitLoc[3]));
                     personMap.put(personLoc.getName() + "-" + personLoc.getSurname(),
                                   personLoc);
+                    // ESystemState valueOfLoc = ESystemState.valueOf(stringLoc);
                 }
             }
             System.out.println(personMap);
